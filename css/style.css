@@ -68,6 +68,17 @@ p, h1,h2,h3,h4,h5,h6,span{
 	font-family: Munchkin;
 	font-weight: bold;
 }
+#img_l{
+	width: calc(55% - 20px);
+	float: left;
+}
+#img_r{
+	width: calc(55% - 20px);
+	float: right;
+}
+.content1{
+	display: inline-block;
+}
 
 
 
@@ -356,6 +367,7 @@ table{
 
 
 .accordion1 {
+	display: inline-block;
     margin:0 auto;
     font-size:14px;
     border-radius:10px;
@@ -410,7 +422,7 @@ table{
     transition: all .5s ease-out;
 }
 .vertical1 [type=checkbox]:checked ~ label ~ .content {
-    height:400px;
+    height:350px;
 }
 .vertical1 label img{
 	height: 100px;
