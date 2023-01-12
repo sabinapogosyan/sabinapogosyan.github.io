@@ -5,6 +5,9 @@ body {
   font-family: "Montserrat", sans-serif;
   color: #f035c5;
   background-color: #0e2a36;
+  background: url('../img/backgrounds/BG.png');
+  background-size: 100%;
+  --bs-border-color: #f035c5;
 }
 
 a {
@@ -30,7 +33,7 @@ h6 {
   background: url('../img/wave.png') no-repeat top center;
   background-size: 100%;
   display: block;
-  height: 18px;
+  height: calc(100vw / 20);
   border: 0;
 }
 
@@ -40,6 +43,14 @@ h6 {
 
 .img-title {
   max-width: 80px;
+}
+
+.small-text {
+  font-size: 0.8rem;
+}
+
+.smaller-text {
+  font-size: 0.72rem;
 }
 
 .btn-primary {
@@ -58,6 +69,7 @@ h6 {
   --bs-btn-disabled-bg: #f035c5;
   --bs-btn-disabled-border-color: #f035c5;
 }
+
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -95,9 +107,6 @@ h6 {
 /*--------------------------------------------------------------
 # Details
 --------------------------------------------------------------*/
-.details .content+.content {
-  margin-top: 25px;
-}
 
 .details .content ul {
   list-style: none;
@@ -108,6 +117,9 @@ h6 {
   padding-bottom: 10px;
 }
 
+.details .content ul li:last-child {
+  padding-bottom: 0px;
+}
 
 
 /*--------------------------------------------------------------
@@ -144,4 +156,54 @@ h6 {
 
 .products .bi-check-circle-fill {
   color: #f035c5;
+}
+
+/*--------------------------------------------------------------
+# Products
+--------------------------------------------------------------*/
+.speech-bubble {
+  --triangle-size: 20px;
+  --border-size: 2px;
+  --position: 80%;
+  --border-color: #f035c5;
+  --background-color: white;
+
+	position: relative;
+	background: var(--background-color);
+	border-radius: .4em;
+  border: var(--border-size) solid var(--border-color);
+}
+
+.speech-bubble:before {
+	content: '';
+	width: 0;
+	height: 0;
+    
+	position: absolute;
+	top: 0;
+	left: var(--position);
+	
+	border: var(--triangle-size) solid transparent;
+	border-bottom-color: var(--border-color);
+	border-top: 0;
+	border-right: 0;
+	margin-left: calc(var(--triangle-size) * (-1 / 2));
+	margin-top: calc(var(--triangle-size) * -1);
+}
+
+.speech-bubble:after {
+  content: "";
+  width: 0;
+  height: 0;
+  
+  position: absolute;
+  top: 0;
+  left: var(--position);
+  
+  border: calc(var(--triangle-size) - var(--border-size) * 2) solid transparent;
+  border-bottom: solid calc(var(--triangle-size) - var(--border-size) * 2) var(--background-color);
+  border-top: 0;
+  border-right: 0;
+  margin-left: calc((-1 / 2) * var(--triangle-size) + var(--border-size) + 0.5px);
+  margin-top: calc(-1 * var(--triangle-size) + var(--border-size) * 2)
 }
