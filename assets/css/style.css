@@ -6,7 +6,8 @@ body {
   color: #f035c5;
   background-color: #0e2a36;
   background: url('../img/backgrounds/BG.png');
-  background-size: 100%;
+  background-size: cover;
+  max-width: 100vw;
   --bs-border-color: #f035c5;
 }
 
